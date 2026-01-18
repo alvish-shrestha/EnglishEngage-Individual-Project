@@ -1,0 +1,46 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore Python virtual environment folder
+venv/
+
+# Ignore training output folders (large model checkpoints, logs, results)
+bert_results/
+t5_results/
+data/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files (if any)
+.env
+*.env
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# IDE/editor settings (optional)
+.vscode/
+.idea/
+
+# Local Data and Runtime
+user_progress.json
+sentences.txt
+
+# Model Artifacts
+models/
+experiments/bert_difficulty_model/
+experiments/t5_sentence_generator/
