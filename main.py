@@ -41,9 +41,9 @@ DATA_FILE = "data/cleaned_sentences.txt"
 
 # --- Dynamic Content ---
 POSITIVE_FEEDBACK = [
-    "Excellent! ✨", "Great Job! 🎯", "Perfect! 🌟", 
-    "Amazing! 🚀", "Spot on! ✅", "You got it! 🎉",
-    "Fantastic! 💎", "Keep it up! 🔥"
+    "Excellent!", "Great Job!", "Perfect!", 
+    "Amazing!", "Spot on!", "You got it!",
+    "Fantastic!", "Keep it up!"
 ]
 
 # ------------------ LOAD MODELS -------------------
@@ -131,7 +131,7 @@ def get_speech_input():
         with mic as source:
             recognizer.adjust_for_ambient_noise(source, duration=0.5)
             # Listen with a timeout
-            audio = recognizer.listen(source, timeout=5, phrase_time_limit=5)
+            audio = recognizer.listen(source, timeout=15, phrase_time_limit=15)
         result = recognizer.recognize_google(audio)
         return result.lower()
     except sr.WaitTimeoutError:
